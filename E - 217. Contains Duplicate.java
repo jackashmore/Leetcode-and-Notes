@@ -22,18 +22,18 @@
 // -109 <= nums[i] <= 109
 
 
-// class Solution {
-//     public boolean containsDuplicate(int[] nums) {
-//         for (int i = 0; i < nums.length; i++) {
-//             for (int j = i + 1; j < nums.length; j++) {
-//                 if (nums[i] == nums[j]) {
-//                     return true;
-//                 }
-//             }
-//         }
-//         return false;
-//     }
-// }
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
 
 // This was my original solution. Obviously inefficient, running in O(n^2) time
 // for nested for loops. Time Limit Exceeded when submitted.
