@@ -1,8 +1,8 @@
-// For Kadane's algorithm, we keep track of two "max" variables: a max ending at the 
-// current index and a local maximum thus far. First we initialize the maximum ending
-// at the current index to -Infinity (Integer.MIN_VALUE) and the local max to 0. Iterate
-// through the array once; Kadane's algorithm updates the local maximum such that:
-// localMax = localMax + array[i].
+// This problem necessitates Kadane's algorithm. For Kadane's algorithm, we keep track of 
+// two "max" variables: a max ending at the current index and a local maximum thus far. 
+// First we initialize the maximum ending at the current index to -Infinity (Integer.MIN_VALUE) 
+// and the local max to 0. Iterate through the array once; Kadane's algorithm updates the 
+// local maximum such that localMax = localMax + array[i].
 
 // Now we need to do a check: is the maximum ending at the current index less than the 
 // local max? If so, update the maximum ending at the current index to be equal to the 
