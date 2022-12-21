@@ -36,7 +36,7 @@ class Solution {
 }
 
 // This was my original solution. Obviously inefficient, running in O(n^2) time
-// for nested for loops. Time Limit Exceeded when submitted.
+// for nested for loops. TLE when submitted.
 
 class Solution {
     public boolean containsDuplicate(int[] nums) {
@@ -52,4 +52,23 @@ class Solution {
 
 // Much faster solution than the above linear search I originally tried. Easy 
 // thing to make the search faster is sorting the nums before searching through.
-// Got to make sure I'm paying attention to array bounds.
+// Got to make sure I'm paying attention to array bounds. Calling Arrays.sort()
+// makes this O(nlogn), so we can make it faster.
+
+// Quicker approach involves using a HashSet. A HashSet is a set backed by an
+// underlying hash map and has add() operations instead of put(). The add()
+// method only adds a value to a HashSet if it is a distinct value, so an easy
+// way to approach this would be to put all values from the nums array into the
+// HashSet and compare the array length to the size of the set. Something like this:
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Set<Integer> hSet = new HashSet<Integer>();
+        for (int i = 0; i < nums.length; i++) {
+        	hSet.add(nums[i]); // won't add if it's a duplicate
+        }
+        // If the size of the set is the same as the array length,
+        // we know they were all distinct elements
+        return !(hSet.size() == nums.length);
+    }
+}
