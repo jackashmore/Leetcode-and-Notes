@@ -72,3 +72,8 @@ class Solution {
         return !(hSet.size() == nums.length);
     }
 }
+
+// Update: A pretty easy way to make the above code even faster is to add a check
+// in to see if nums[i] is contained in the HashSet already when adding it from the
+// array. If this is the case, return true. This would stop it early and prevent the
+// need of adding all the elements to the set first.
