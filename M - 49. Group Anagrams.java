@@ -27,8 +27,8 @@
 
 // Breaking into mediums slowly but surely... Honestly I wasn't that sure of how to approach this at the start. I recalled the
 // easy way we could check if two strings were anagrams and thought about using that method as a helper function while iterating
-// through the strings in the provided String array, but quickly realized that that wouldn't be even close to efficient. Tried
-// whiteboarding a solution on my tablet for like 15 minutes and was still stumped, so I followed an online solution. The method
+// through the strings in the provided String array, but quickly realized that that would be alarmingly ineffiecient, ugh. Tried
+// whiteboarding a solution on my tablet for like 15 minutes and was still stumped so I followed an online solution. The method
 // I found involved using our friend Arrays.sort on the char arrays of each string and utilizing a HashMap of <String, List<String>>.
 
 // Check through each string in strs; make them character arrays, sort these character arrays, and then construct new strings out of
