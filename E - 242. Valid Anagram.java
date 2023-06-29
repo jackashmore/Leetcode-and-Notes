@@ -56,3 +56,7 @@ class Solution {
         return true;
     }
 }
+
+// Revisit because I realized I forgot to say what the better time and space complexity piece was...
+// We're used a fixed size array that doesn't change size due to inputs, so our space complexity is just O(1) here. O(n)
+// time complexity because of our for loops...
